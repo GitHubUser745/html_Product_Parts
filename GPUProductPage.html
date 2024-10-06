@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Page</title>
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&family=League+Spartan:wght@100..900&family=Lobster&family=Rubik:ital,wght@0,600;1,600&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       
+        <link rel="stylesheet" href="styles/ProductPage.css">
+    
+    </head>
+
+    <body>
+
+        <section id = header>
+            <a href = "#"><img src = "logo/Logo-final.jpeg" alt = "" class = "logo"></a>
+
+            <div>
+                <ul id = "navbar">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a class = "current" href="product.html">Product</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html"><i class = "material-icons">add_shopping_cart</i></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="img_container">
+            <section id="item-showcase">
+                <div class="title-item-showcase">
+                    <p class="item_description" id="title1">See Our Best Deals For</p>
+                    <p class="item_description" id="title2">Graphics Cards</p>
+                </div>
+                <div class="description-item-showcase">
+                    <p class="item_paragraph">Explore our handpicked selection of high-performance graphics cards, designed to elevate your gaming and creative experiences.</p>
+                </div>
+                <a href="#" class="showcase-button">Shop Now</a>
+            </section>
+        
+            <div class="myimage">
+                <img src="SingleProductPage/GpuSingleProductPage/Images/GpuShowCase.jpg" alt="Graphics Card Showcase">
+            </div>    
+
+        </div>
+
+        <div class = "final-container">
+
+            <div class="interactive-category">
+
+                <p class = "product-list-title">Our Products</p>
+    
+                <div class="category">
+                    <span id="arrow1" onclick="toggleList('list1', 'arrow-icon1')">
+                        <img id="arrow-icon1" src="MyImagesAndIcons/Right_Arrow.png" alt="Arrow"> Printers
+                    </span>
+                    <ul id="list1" class="hidden">
+                        <li><a href="#" onclick="loadProductPage('Inkjet printer')">Inkjet printer</a></li>
+                        <li><a href="#" onclick="loadProductPage('Dot matrix printer')">Dot matrix printer</a></li>
+                        <li><a href="#" onclick="loadProductPage('Laser printer')">Laser printer</a></li>
+                    </ul>
+                </div>
+            
+                <div class="category">
+                    <span id="arrow2" onclick="toggleList('list2', 'arrow-icon2')">
+                        <img id="arrow-icon2" src="MyImagesAndIcons/Right_Arrow.png" alt="Arrow"> PC Components
+                    </span>
+                    <ul id="list2" class="hidden">
+                        <li><a href="#" onclick="loadProductPage('Monitor')">Monitor</a></li>
+                        <li><a href="#" onclick="loadProductPage('Casing')">Casing</a></li>
+                        <li><a href="#" onclick="loadProductPage('CPU Cooler')">CPU Cooler</a></li>
+                        <li><a href="#" onclick="loadProductPage('CPU')">CPU</a></li>
+                        <li><a href="#" onclick="loadProductPage('Power Supply')">Power Supply</a></li>
+                        <li><a href="#" onclick="loadProductPage('GPU')">GPU</a></li>
+                    </ul>
+                </div>
+            
+                <div class="category">
+                    <span id="arrow3" onclick="toggleList('list3', 'arrow-icon3')">
+                        <img id="arrow-icon3" src="MyImagesAndIcons/Right_Arrow.png" alt="Arrow"> Storage
+                    </span>
+                    <ul id="list3" class="hidden">
+                        <li><a href="#" onclick="loadProductPage('Hard Disk Drive')">Hard Disk Drive</a></li>
+                        <li><a href="#" onclick="loadProductPage('Solid State Drive')">Solid State Drive</a></li>
+                    </ul>
+                </div>
+            
+                <div class="category">
+                    <span id="arrow4" onclick="toggleList('list4', 'arrow-icon4')">
+                        <img id="arrow-icon4" src="MyImagesAndIcons/Right_Arrow.png" alt="Arrow"> Audio
+                    </span>
+                    <ul id="list4" class="hidden">
+                        <li><a href="#" onclick="loadProductPage('Headphone')">Head Phone</a></li>
+                        <li><a href="#" onclick="loadProductPage('Speaker')">Speaker</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class = "product-page">
+
+                <p class = "subtitle">GPU Selection</p> 
+                <p class = "sub-subtitle">Check out our new 2024 Gpu Arrivals !</p>
+        
+                <div class="sort-container">
+
+                    <span class="sort-label">Sort by: </span>
+                    <select id="sortPriceAndStar" onchange="sortProducts()">
+                        <option value="asc">Price: Low to High</option>
+                        <option value="desc">Price: High to Low</option>
+                        <option value="star-asc">Ratings: Low to High</option>
+                        <option value="star-desc">Ratings: High to Low</option>
+                    </select>
+
+                </div>
+        
+                <div class="product-grid">
+        
+                    <div class="product-box" data-price="25700" data-stars="5">
+                        <div>
+                            <p class="product-name">RTX 3080</p>
+                        </div>
+                        <div>
+                            <img class="image" src="SingleProductPage/GpuSingleProductPage/Images/RTX3080.jpg">
+                        </div>
+                        <div class="detailed-product-name">
+                            <p>ASUS TUF GAMING NVIDIA RTX 3080 10G V2 GAMING</p>
+                        </div>
+                        <hr class="line">
+                        <div class="cost">
+                            RS 25,700.00
+                        </div>
+                        <hr class="line">
+                        <div class="star">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        </div>
+                        <div class="product-button">
+                            <button class="view-product" data-id="${product.id}">View Product</button>
+                        </div>
+                    </div>
+                
+                    <div class="product-box" data-price="40500" data-stars="4">
+                        <div>
+                            <p class="product-name">RTX 4080 SUPER</p>
+                        </div>
+                        <div>
+                            <img class="image" id="jpeg4080" src="SingleProductPage/GpuSingleProductPage/Images/RTX4080Super.jpg">
+                        </div>
+                        <div class="detailed-product-name">
+                            <p>ROG Strix GeForce RTX™ 4080 SUPER 16GB GDDR6X OC Edition</p>
+                        </div>
+                        <hr class="line">
+                        <div class="cost">
+                            RS 40,500.00
+                        </div>
+                        <hr class="line">
+                        <div class="star">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="product-button">
+                            <button class="view-product" data-id="${product.id}">View Product</button>
+                        </div>
+                    </div>
+                
+                    <div class="product-box" data-price="18400" data-stars="5">
+                        <div>
+                            <p class="product-name">GTX 1660 TI</p>
+                        </div>
+                        <div>
+                            <img class="image" id="jpeg1660TI" src="SingleProductPage/GpuSingleProductPage/Images/GTX 1660 TI._AC_SL1500_.jpg">
+                        </div>
+                        <div class="detailed-product-name">
+                            <p>TUF Gaming GeForce® GTX 1660 Ti EVO OC Edition 6GB GDDR6</p>
+                        </div>
+                        <hr class="line">
+                        <div class="cost">
+                            RS 18,400.00
+                        </div>
+                        <hr class="line">
+                        <div class="star">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        </div>
+                        <div class="product-button">
+                            <button class="view-product" data-id="${product.id}">View Product</button>
+                        </div>
+                    </div>
+                
+                    <div class="product-box" data-price="25700" data-stars="4">
+                        <div>
+                            <p class="product-name">RTX 3070</p>
+                        </div>
+                        <div>
+                            <img class="image" id="jpeg3070" src="SingleProductPage/GpuSingleProductPage/Images/RTX3070white.jpg">
+                        </div>
+                        <div class="detailed-product-name">
+                            <p>ROG-STRIX-RTX3070-O8G-WHITE</p>
+                        </div>
+                        <hr class="line">
+                        <div class="cost">
+                            RS 25,700.00
+                        </div>
+                        <hr class="line">
+                        <div class="star">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="product-button">
+                            <button class="view-product" data-id="${product.id}">View Product</button>
+                        </div>
+                    </div>
+                
+                    <div class="product-box" data-price="10700" data-stars="3">
+                        <div>
+                            <p class="product-name">GTX 1650 EVO</p>
+                        </div>
+                        <div>
+                            <img class="image" id="jpeg1650" src="SingleProductPage/GpuSingleProductPage/Images/GTX 1650 Evo.jpeg">
+                        </div>
+                        <div class="detailed-product-name">
+                            <p>ASUS Phoenix GeForce GTX 1650 EVO OC Edition 4GB GDDR6</p>
+                        </div>
+                        <hr class="line">
+                        <div class="cost">
+                            RS 10,700.00
+                        </div>
+                        <hr class="line">
+                        <div class="star">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="product-button">
+                            <button class="view-product" data-id="${product.id}">View Product</button>
+                        </div>
+                    </div>
+                
+                    <div class="product-box" data-price="80700" data-stars="5">
+                        <div>
+                            <p class="product-name">RTX 4090</p>
+                        </div>
+                        <div>
+                            <img class="image" id="jpeg4090" src="SingleProductPage/GpuSingleProductPage/Images/4090.jpg">
+                        </div>
+                        <div class="detailed-product-name">
+                            <p>ASUS TUF Gaming GeForce RTX™ 4090 24GB GDDR6X OG</p>
+                        </div>
+                        <hr class="line">
+                        <div class="cost">
+                            RS 80,700.00
+                        </div>
+                        <hr class="line">
+                        <div class="star">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        </div>
+                        <div class="product-button">
+                            <button class="view-product" data-id="${product.id}">View Product</button>
+                        </div>
+                    </div>
+                
+                    <div class="product-box" data-price="26700" data-stars="4">
+                        <div>
+                            <p class="product-name">RTX 2060</p>
+                        </div>
+                        <div>
+                            <img class="image" id="jpeg2060" src="SingleProductPage/GpuSingleProductPage/Images/2060EVO.jpeg">
+                        </div>
+                        <div class="detailed-product-name">
+                            <p>ASUS Dual GeForce RTX 2060 EVO</p>
+                        </div>
+                        <hr class="line">
+                        <div class="cost">
+                            RS 26,700.00
+                        </div>
+                        <hr class="line">
+                        <div class="star">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="product-button">
+                            <button class="view-product" data-id="${product.id}">View Product</button>
+                        </div>
+                    </div>
+                
+                    <div class="product-box" data-price="29700" data-stars="2">
+                        <div>
+                            <p class="product-name">RTX 2080 EVO</p>
+                        </div>
+                        <div>
+                            <img class="image" id="jpeg2060EVO" src="SingleProductPage/GpuSingleProductPage/Images/2060EVO.jpeg">
+                        </div>
+                        <div class="detailed-product-name">
+                            <p>DUAL-RTX2080-A8G-EVO</p>
+                        </div>
+                        <hr class="line">
+                        <div class="cost">
+                            RS 29,700.00
+                        </div>
+                        <hr class="line">
+                        <div class="star">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="product-button">
+                            <button class="view-product" data-id="${product.id}">View Product</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>   
+
+        <section id = "sm-banner" class = "banner-section">
+            <div class = "banner-box">
+                <li><a href="#" onclick="loadProductPage('Monitor')">Monitor</a></li>
+                <p class = "green-text">Check out</p>
+                <p class = "green-text">Our New Monitors</p>
+                <p class = "blue-text">Our new batch of Monitors have just arrived !</p>
+                <button class = "learn-more-button" onclick="loadProductPage('Monitor')">Learn More</button>
+            </div>  
+            <div class = "banner-box2">
+                <p class = "green-text">Check out</p>
+                <p class = "green-text">Our New Gaming Casing</p>
+                <p class = "yellow-text">Our new batch of Gaming Casings have just arrived !</p>
+                <button class = "learn-more-button learn-more-button2" onclick="loadProductPage('Casing')">Learn More</button>
+            </div>       
+        </section>
+
+        <section id = "banner3">
+            <div class = "banner-box">
+                <p class = "white-text">Check out</p>
+                <p class = "white-text">Our New Power Supply</p>
+                <button class = "learn-more-button3" onclick="loadProductPage('Power Supply')">Learn More</button>
+            </div>     
+        </section>
+
+        <section id = "sm-banner2" class = "banner-section2">
+            <div class = "banner-box4" id = "box-10">
+                <p class = "black-text">Check out</p>
+                <p class = "black-text">Our New CPUs</p>
+                <p class = "blue-text">Our new batch of CPUs have just arrived !</p>
+                <button class = "learn-more-button" onclick="loadProductPage('CPU')">Learn More</button>
+            </div>  
+            <div class = "banner-box5" id = "box-11">
+                <p class = "black-text">Check out</p>
+                <p class = "black-text">Our New Gaming GPUs</p>
+                <p class = "yellow-text">Our new batch of Gaming GPUs have just arrived !</p>
+                <button class = "learn-more-button learn-more-button2" onclick="loadProductPage('GPU')">Learn More</button>
+            </div>       
+            <div class = "banner-box6" id = "box-12">
+                <p class = "black-text">Check out</p>
+                <p class = "black-text">Our New CPU Coolers</p>
+                <p class = "yellow-text">Our new batch of CPU Coolers have just arrived !</p>
+                <button class = "learn-more-button learn-more-button2" onclick="loadProductPage('CPU Cooler')">Learn More</button>
+            </div>     
+        </section>
+
+        <!------------back to top button----------->
+        <div onclick="scrollToTop()" class="scrollTop">Top</div>
+
+        <!------------newsletter----------->
+        <section id="newsletter" class="section-p1 section-m1">
+            <div class="newstext">
+                <h4>Sign Up For Newsletters</h4>
+                <p>Get E-mail updates about our latest shop and <span> special offers.</span></p>
+             </div>
+             <div class="form">
+                <input type="text" placeholder="your email address">
+                <button class="normal">Sign Up</button>
+             </div>       
+        </section>
+
+        <!-----footer----->
+        
+        <footer class="section-p1">
+            <div class="col">
+                <img class="logo" src="image/logo-1.jpg" alt="logo" style="width:75px;height:75px;">
+                <h4><b>Contact</b></h4>
+                <p><strong>Address:</strong>4 Leoville L'Homme St, Port-Louis</p>
+                <p><strong>Phone:</strong>218 2035/240 4035</p>
+                <p><strong>Hours:</strong>09:00-17:00, Monday - Friday</p>
+                <div class="follow">
+                   <h4><b>Follow us</b></h4>
+                   <div class="icon">
+                      <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                      <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                   </div>
+                </div>    
+            </div>
+
+            <div class="col">
+                <h4><b>About</b></h4>
+                <a href="#">About us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Contact us</a>
+            </div>
+          
+            <div class="col">
+                <h4><b>My Account</b></h4>
+                <a href="">Sign In</a>
+                <a href="cart.html">View cart</a>
+            </div>
+          
+            <div class="col install">
+                <h4><b>Install App</b></h4>
+                <p>From App Store or Google Play</p>
+                <div class="app-logo">
+                      <img src="Image/playstore-logo.png" style="width:100px;height:75px;">
+                </div>
+                <p>Secured Payment Gateways</p>
+                <img src="Image/payment icon.png" alt="payment" style="width:200px;height:40px;">
+            </div>
+          
+            <div class="copyright">
+                <p>Copyright 2020</p> 
+            </div>
+        </footer>
+
+        <script src="SortForPriceAndStar.js"></script>
+
+        <script src="ShowItems.js"></script>
+
+        <script src="loadProductPage.js"></script>
+
+        <script src="SingleProduct.js"></script>
+
+          
+    </body>
+
+</html>
